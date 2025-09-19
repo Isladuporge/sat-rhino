@@ -1,12 +1,11 @@
 # Rhinoceros Detection
 
-Official repository for *"Automated Rhinoceros Detection in Satellite Imagery using Deep Learning"* (Scientific Reports).  
-This repo provides scripts and configs for training and evaluating a YOLOv12 model, plus tools for generating synthetic data in Blender.
+This is the official repository for the paper ``Automated Rhinoceros Detection in Satellite Imagery using Deep Learning'' *Scienticic Reports*. The repository contains scripts and configuration files for training and evaluating a YOLOv12 object detection model to detect rhinoceroses in satellite imagery, including a pipeline for generating synthetic training data using Blender. 
 
 ## Structure
 
 - **scripts/** – main Python code
-  - `sim.py`: create synthetic rhino images with Blender
+  - `sim.py`: Uses the [Blender Python API](https://pypi.org/project/bpy/) (`bpy`) to generate synthetic satellite images of rhinoceroses.
   - `patch.py`: split large satellite images into smaller patches and update labels
   - `coco2yolo.py`: convert COCO JSON annotations to YOLO `.txt` labels
   - `yolo_run.py`: train YOLOv12 with configs
